@@ -30,20 +30,14 @@ public class wordle extends words
         for(int i=1; i<=6; i++){
             String guess=input.nextLine();
 
-            //guess invalid if not 5 letters or not in list of valid words
+            //guess invalid if not 5 letters
             boolean invalidGuess = guess.length()!=5;
-                   // || !(Arrays.asList(fiveLetterWords).contains(guess));
 
             while(invalidGuess){
                 if(guess.length()!=5) {
                     System.out.println("Please enter a word with 5 letters:");
                     guess = input.nextLine();
                 }
-               /* else if(!(Arrays.asList(fiveLetterWords).contains(guess))){
-                    System.out.println("Not in word list. Please enter another word:");
-                    //System.out.println("(Remember to use lowercase letters)");
-                    guess = input.nextLine();
-                } */
                 else{
                     invalidGuess = false;
                     break;
